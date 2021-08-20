@@ -12,10 +12,12 @@ export default StyleSheet.create({
     width: 50,
   },
   header: {
+    marginTop: 0,
     height: 70,
     marginBottom: 20,
     borderBottomWidth: 1,
     borderBottomColor: '#717171',
+    backgroundColor: 'white',
   },
   titleStyle: {
     fontWeight: 'bold',

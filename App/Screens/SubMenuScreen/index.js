@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
-import Header from '../../components/Header';
+import CommonHeader from '../../components/CommonScreen';
 
 import ApplicationStyles from '../../Themes/ApplicationStyles';
 import styles from './styles';
@@ -11,10 +11,9 @@ function SubMenuScreen() {
   const navigation = useNavigation();
   const route = useRoute();
   const title = route.params.title;
-  const elementsToButton = getButtons(title);
+  const elementsToButton = getButtons(title, navigation, route.params);
   return (
-    <View style={styles.container}>
-      <Header title={title} />
+    <CommonHeader title={title}>
       <View style={styles.content}>
         <Image
           source={route.params.icon}
@@ -23,24 +22,20 @@ function SubMenuScreen() {
         />
         <TouchableOpacity
           style={[ApplicationStyles.button, styles.subMenuButton]}
-          onPress={() => {
-            navigation.navigate('Video');
-          }}>
+          onPress={elementsToButton.firstOnPress}>
           <Text style={ApplicationStyles.textButton}>
             {elementsToButton.firstButtonTitle}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[ApplicationStyles.button, styles.subMenuButton]}
-          onPress={() => {
-            navigation.navigate('CalcularCarga');
-          }}>
+          onPress={elementsToButton.secondOnPress}>
           <Text style={ApplicationStyles.textButton}>
             {elementsToButton.secondButtonTitle}
           </Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </CommonHeader>
   );
 }
 

@@ -3,7 +3,6 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E1E1E1',
   },
   content: {
     margin: 16,
@@ -20,7 +19,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   iconStyle: {
-    width: 80,
-    height: 80,
+    width: 60,
+    height: 60,
   },
 });
