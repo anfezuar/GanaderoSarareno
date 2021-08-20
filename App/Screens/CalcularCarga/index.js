@@ -8,10 +8,10 @@ import {
   TextInput,
   KeyboardAvoidingView,
 } from 'react-native';
+import Header from '../../components/Header';
 
 import ApplicationStyles from '../../Themes/ApplicationStyles';
 import styles from './styles';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class calcularCarga extends React.PureComponent {
   constructor(props) {
@@ -74,17 +74,6 @@ export default class calcularCarga extends React.PureComponent {
     });
   };
 
-  /* calcularCarga = () => {
-    const {animales, peso, materiaSeca} = this.state;
-    var pesoTotal = peso * animales;
-    var carga = pesoTotal / materiaSeca;
-    carga = Math.round(carga);
-    this.setState({
-      cargaCalculada: true,
-      carga: carga,
-    });
-  }; */
-
   calcularCarga = () => {
     const {peso, materiaSeca} = this.state;
     var pesoTotal = (peso * 4) / 100;
@@ -107,32 +96,13 @@ export default class calcularCarga extends React.PureComponent {
       materiaCalculada,
       cargaCalculada,
       carga,
-      animalesString,
       pesoString,
     } = this.state;
-    const {
-      container,
-      iconoBack,
-      textInput,
-      button,
-      textButton,
-      header,
-    } = ApplicationStyles;
+    const {container, textInput, button, textButton} = ApplicationStyles;
     return (
       <KeyboardAvoidingView style={container}>
         <ScrollView>
-          <View style={[header]}>
-            <Icon
-              name="chevron-back"
-              style={iconoBack}
-              onPress={() => {
-                this.props.navigation.goBack(null);
-              }}
-            />
-            <View style={{alignSelf: 'center'}}>
-              <Text style={ApplicationStyles.titulo}>Calcular Carga</Text>
-            </View>
-          </View>
+          <Header title={'Calcular Carga'} />
           <Text style={styles.texto}>
             Agregue el valor en gramos obtenido de la medición de los 20 marcos
             (No usar ni puntos ni comas y solo valores enteros):
@@ -157,21 +127,6 @@ export default class calcularCarga extends React.PureComponent {
               <Text style={[styles.texto, styles.textoCarga]}>
                 {materiaSecaString} Kg
               </Text>
-              {/* <Text style={[styles.texto, {marginTop: 20}]}>
-                Ahora para calcular carga ingrese los siguientes datos:
-              </Text> */}
-              {/* <Text style={[styles.texto, {marginTop: 10}]}>
-                1. Número de bovinos que van a ingresar en los potreros:
-              </Text>
-              <TextInput
-                style={textInput}
-                onChangeText={(text) => {
-                  this.onAnimalesChange(text);
-                }}
-                value={animalesString}
-                autoCompleteType="cc-number"
-                keyboardType="number-pad"
-              /> */}
               <Text style={[styles.texto, {marginTop: 10}]}>
                 Agregue el peso promedio de los bovinos que van a ingresar a los
                 potreros (Promedio en kilogramos, sin puntos ni comas):

@@ -5,6 +5,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Home from './App/Screens/Home';
 import Video from './App/Screens/VideoCarga';
 import CalcularCarga from './App/Screens/CalcularCarga';
+import SubMenuScreen from './App/Screens/SubMenuScreen';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,11 @@ const App = () => {
         <Stack.Screen
           name="CalcularCarga"
           component={CalcularCarga}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="SubMenuScreen"
+          component={SubMenuScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

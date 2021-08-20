@@ -1,30 +1,17 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {View, Text} from 'react-native';
+import Header from '../../components/Header';
 
 import styles from './styles';
 import ApplicationStyles from '../../Themes/ApplicationStyles';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 import Video from 'react-native-video';
 
 export default function VideoCarga(props) {
   const {backgroundVideo, textoDir, panelTexto} = styles;
-  const {container, iconoBack, header} = ApplicationStyles;
   return (
-    <View style={container}>
-      <View style={header}>
-        <Icon
-          name="chevron-back"
-          style={iconoBack}
-          onPress={() => {
-            props.navigation.goBack(null);
-          }}
-        />
-        <View style={{alignSelf: 'center'}}>
-          <Text style={ApplicationStyles.titulo}>Calcular Carga</Text>
-        </View>
-      </View>
+    <View style={ApplicationStyles.container}>
+      <Header title={'Calcular Carga'} />
       <Video
         source={require('../../Images/video.mp4')}
         controls={true}
