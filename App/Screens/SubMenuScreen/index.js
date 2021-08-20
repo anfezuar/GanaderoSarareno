@@ -1,33 +1,42 @@
 import React from 'react';
-import {View, TouchableOpacity, Text} from 'react-native';
+import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import Header from '../../components/Header';
 
 import ApplicationStyles from '../../Themes/ApplicationStyles';
+import styles from './styles';
+import {getButtons} from './constants';
 
 function SubMenuScreen() {
   const navigation = useNavigation();
   const route = useRoute();
+  const title = route.params.title;
+  const elementsToButton = getButtons(title);
   return (
-    <View>
-      <Header title={route.params.title} />
-      <View>
+    <View style={styles.container}>
+      <Header title={title} />
+      <View style={styles.content}>
+        <Image
+          source={route.params.icon}
+          resizeMode={'contain'}
+          style={styles.iconStyle}
+        />
         <TouchableOpacity
-          style={[ApplicationStyles.button]}
+          style={[ApplicationStyles.button, styles.subMenuButton]}
           onPress={() => {
             navigation.navigate('Video');
           }}>
           <Text style={ApplicationStyles.textButton}>
-            Aprende a Realizar el Aforo
+            {elementsToButton.firstButtonTitle}
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={[ApplicationStyles.button]}
+          style={[ApplicationStyles.button, styles.subMenuButton]}
           onPress={() => {
             navigation.navigate('CalcularCarga');
           }}>
           <Text style={ApplicationStyles.textButton}>
-            Calcular Carga Animal
+            {elementsToButton.secondButtonTitle}
           </Text>
         </TouchableOpacity>
       </View>
