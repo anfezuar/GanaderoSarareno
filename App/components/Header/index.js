@@ -10,7 +10,12 @@ function Header({title}) {
   const goBack = () => navigation.goBack(null);
   return (
     <View style={styles.header}>
-      <Icon name="chevron-back" style={styles.iconoBack} onPress={goBack} />
+      <Icon
+        name="chevron-back"
+        style={styles.iconoBack}
+        onPress={goBack}
+        color="#fff"
+      />
       <View style={styles.titleContainer}>
         <Text style={styles.titleStyle}>{title}</Text>
       </View>

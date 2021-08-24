@@ -6,11 +6,15 @@ export default StyleSheet.create({
   },
   content: {
     margin: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 20,
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius: 10,
+  },
+  formStyle: {
+    width: '100%',
   },
   subMenuButton: {
     height: 50,
@@ -21,5 +25,12 @@ export default StyleSheet.create({
   iconStyle: {
     width: 60,
     height: 60,
+    marginVertical: 20,
+  },
+  buttonStyle: {
+    position: 'absolute',
+    bottom: 16,
+    left: 16,
+    right: 16,
   },
 });

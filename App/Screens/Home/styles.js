@@ -4,6 +4,7 @@ export default {
     height: 142,
     alignSelf: 'center',
     marginBottom: 30,
+    marginTop: 15,
   },
   contenedor: {
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
