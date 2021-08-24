@@ -8,10 +8,12 @@ import {
   TextInput,
   KeyboardAvoidingView,
 } from 'react-native';
-import Header from '../../components/Header';
+import CommonScreen from '../../components/CommonScreen';
+import CustomButton from '../../components/CustomButton';
 
 import ApplicationStyles from '../../Themes/ApplicationStyles';
 import styles from './styles';
+import {headerText, materiaText} from './constants';
 
 export default class calcularCarga extends React.PureComponent {
   constructor(props) {
@@ -99,66 +101,65 @@ export default class calcularCarga extends React.PureComponent {
       pesoString,
     } = this.state;
     const {container, textInput, button, textButton} = ApplicationStyles;
+
     return (
-      <KeyboardAvoidingView style={container}>
-        <ScrollView>
-          <Header title={'Calcular Carga'} />
-          <Text style={styles.texto}>
-            Agregue el valor en gramos obtenido de la medición de los 20 marcos
-            (No usar ni puntos ni comas y solo valores enteros):
-          </Text>
-          <TextInput
-            style={textInput}
-            onChangeText={(text) => {
-              this.onAforoChange(text);
-            }}
-            value={aforoString}
-            autoCompleteType="cc-number"
-            keyboardType="number-pad"
-          />
-          <TouchableOpacity
-            style={[button, styles.botones]}
-            onPress={this.calcularMateriaSeca}>
-            <Text style={textButton}>Calcular Materia Seca</Text>
-          </TouchableOpacity>
-          {materiaCalculada && (
-            <View style={container}>
-              <Text style={styles.texto}>La materia seca disponible es:</Text>
-              <Text style={[styles.texto, styles.textoCarga]}>
-                {materiaSecaString} Kg
-              </Text>
-              <Text style={[styles.texto, {marginTop: 10}]}>
-                Agregue el peso promedio de los bovinos que van a ingresar a los
-                potreros (Promedio en kilogramos, sin puntos ni comas):
-              </Text>
-              <TextInput
-                style={textInput}
-                onChangeText={(text) => {
-                  this.onPesoChange(text);
-                }}
-                value={pesoString}
-                autoCompleteType="cc-number"
-                keyboardType="number-pad"
-              />
-              <TouchableOpacity
-                style={[button, styles.botones]}
-                onPress={this.calcularCarga}>
-                <Text style={textButton}>Calcular Carga Animal</Text>
-              </TouchableOpacity>
-            </View>
-          )}
-          {cargaCalculada && (
-            <View style={[container, {marginBottom: 20}]}>
-              <Text style={styles.texto}>
-                La carga total por hectárea es de:
-              </Text>
-              <Text style={[styles.texto, styles.textoCarga]}>
-                {carga} bovinos por hectárea
-              </Text>
-            </View>
-          )}
-        </ScrollView>
-      </KeyboardAvoidingView>
+      <CommonScreen title={'Calcular Carga'}>
+        <KeyboardAvoidingView style={container}>
+          <ScrollView style={styles.content}>
+            <Text style={styles.texto}>{headerText}</Text>
+            <TextInput
+              style={textInput}
+              onChangeText={(text) => {
+                this.onAforoChange(text);
+              }}
+              value={aforoString}
+              autoCompleteType="cc-number"
+              keyboardType="number-pad"
+            />
+            <TouchableOpacity
+              style={[button, styles.botones]}
+              onPress={this.calcularMateriaSeca}>
+              <Text style={textButton}>Calcular Materia Seca</Text>
+            </TouchableOpacity>
+            {materiaCalculada && (
+              <View style={container}>
+                <Text style={styles.texto}>La materia seca disponible es:</Text>
+                <Text style={[styles.texto, styles.textoCarga]}>
+                  {materiaSecaString} Kg
+                </Text>
+                <Text style={[styles.texto, {marginTop: 10}]}>
+                  {materiaText}
+                </Text>
+                <TextInput
+                  style={textInput}
+                  onChangeText={(text) => {
+                    this.onPesoChange(text);
+                  }}
+                  value={pesoString}
+                  autoCompleteType="cc-number"
+                  keyboardType="number-pad"
+                />
+
+                <TouchableOpacity
+                  style={[button, styles.botones]}
+                  onPress={this.calcularCarga}>
+                  <Text style={textButton}>Calcular Carga Animal</Text>
+                </TouchableOpacity>
+              </View>
+            )}
+            {cargaCalculada && (
+              <View style={[container, {marginBottom: 20}]}>
+                <Text style={styles.texto}>
+                  La carga total por hectárea es de:
+                </Text>
+                <Text style={[styles.texto, styles.textoCarga]}>
+                  {carga} bovinos por hectárea
+                </Text>
+              </View>
+            )}
+          </ScrollView>
+        </KeyboardAvoidingView>
+      </CommonScreen>
     );
   }
 }

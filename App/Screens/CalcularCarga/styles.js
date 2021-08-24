@@ -12,4 +12,12 @@ export default {
   botones: {
     marginTop: 30,
   },
+  content: {
+    margin: 16,
+    paddingHorizontal: 16,
+    paddingVertical: 20,
+    flex: 1,
+    backgroundColor: 'white',
+    borderRadius: 10,
+  },
 };

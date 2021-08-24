@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Image} from 'react-native';
+import {View, Image, TouchableWithoutFeedback, Keyboard} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import CommonScreen from '../../components/CommonScreen';
 import CustomTextInput from '../../components/CustomTextInput';
@@ -19,7 +19,9 @@ function FoodScreen() {
   const [protein, setProtein] = useState('%');
   const [fishAliment, setFishAliment] = useState('');
   const [chickenAliment, setChickenAliment] = useState('');
+  const [hasResult, setHasResult] = useState(false);
   const handleCalculate = () => {
+    setHasResult(true);
     if (title === 'Peces') {
       setProtein(getProtein(weight));
       const biomasa = getBiomasa(weight);
@@ -30,36 +32,44 @@ function FoodScreen() {
       setChickenAliment(totalAliment);
     }
   };
+  const handleTapOut = () => Keyboard.dismiss;
   return (
-    <CommonScreen title={title}>
-      <View style={styles.content}>
-        <Image
-          source={route.params.icon}
-          resizeMode={'contain'}
-          style={styles.iconStyle}
-        />
-        <View style={styles.formStyle}>
-          <CustomTextInput
-            label={'Peso Promedio'}
-            value={weight}
-            onChangeText={setWeight}
+    <TouchableWithoutFeedback onPress={handleTapOut} style={styles.container}>
+      <CommonScreen title={title}>
+        <View style={styles.content}>
+          <Image
+            source={route.params.icon}
+            resizeMode={'contain'}
+            style={styles.iconStyle}
           />
-          <CustomTextInput
-            label={'Cantidad de animales a sembrar'}
-            value={animals}
-            onChangeText={setAnimals}
-          />
-          {title === 'Peces' ? (
-            <FishFood protein={protein} aliment={fishAliment} />
-          ) : (
-            <ChickenFood aliment={chickenAliment} />
-          )}
+          <View style={styles.formStyle}>
+            <CustomTextInput
+              label={'Peso Promedio'}
+              value={weight}
+              onChangeText={setWeight}
+            />
+            <CustomTextInput
+              label={
+                title === 'Peces'
+                  ? 'Cantidad de animales a sembrar'
+                  : 'Cantidad de pollos'
+              }
+              value={animals}
+              onChangeText={setAnimals}
+            />
+            {hasResult &&
+              (title === 'Peces' ? (
+                <FishFood protein={protein} aliment={fishAliment} />
+              ) : (
+                <ChickenFood aliment={chickenAliment} />
+              ))}
+          </View>
+          <View style={styles.buttonStyle}>
+            <CustomButton title={'Calcular'} onPress={handleCalculate} />
+          </View>
         </View>
-        <View style={styles.buttonStyle}>
-          <CustomButton title={'Calcular'} onPress={handleCalculate} />
-        </View>
-      </View>
-    </CommonScreen>
+      </CommonScreen>
+    </TouchableWithoutFeedback>
   );
 }
 

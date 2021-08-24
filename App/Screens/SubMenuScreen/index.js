@@ -2,6 +2,7 @@ import React from 'react';
 import {View, TouchableOpacity, Text, Image} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import CommonHeader from '../../components/CommonScreen';
+import CustomButton from '../../components/CustomButton';
 
 import ApplicationStyles from '../../Themes/ApplicationStyles';
 import styles from './styles';
@@ -20,20 +21,18 @@ function SubMenuScreen() {
           resizeMode={'contain'}
           style={styles.iconStyle}
         />
-        <TouchableOpacity
-          style={[ApplicationStyles.button, styles.subMenuButton]}
-          onPress={elementsToButton.firstOnPress}>
-          <Text style={ApplicationStyles.textButton}>
-            {elementsToButton.firstButtonTitle}
-          </Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[ApplicationStyles.button, styles.subMenuButton]}
-          onPress={elementsToButton.secondOnPress}>
-          <Text style={ApplicationStyles.textButton}>
-            {elementsToButton.secondButtonTitle}
-          </Text>
-        </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+          <CustomButton
+            onPress={elementsToButton.firstOnPress}
+            title={elementsToButton.firstButtonTitle}
+          />
+        </View>
+        <View style={styles.buttonContainer}>
+          <CustomButton
+            onPress={elementsToButton.secondOnPress}
+            title={elementsToButton.secondButtonTitle}
+          />
+        </View>
       </View>
     </CommonHeader>
   );

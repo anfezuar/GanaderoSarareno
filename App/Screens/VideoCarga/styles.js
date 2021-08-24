@@ -1,4 +1,6 @@
-export default {
+import {StyleSheet} from 'react-native';
+
+export default StyleSheet.create({
   fondo: {
     backgroundColor: '#000',
   },
@@ -28,4 +30,7 @@ export default {
     right: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
-};
+  headerStyle: {
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  },
+});

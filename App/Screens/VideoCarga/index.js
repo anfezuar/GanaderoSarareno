@@ -11,7 +11,7 @@ export default function VideoCarga(props) {
   const {backgroundVideo, textoDir, panelTexto} = styles;
   return (
     <View style={ApplicationStyles.container}>
-      <Header title={'Calcular Carga'} />
+      <Header title={'Calcular Carga'} headerStyle={styles.headerStyle} />
       <Video
         source={require('../../Images/video.mp4')}
         controls={true}

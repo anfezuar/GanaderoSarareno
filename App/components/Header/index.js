@@ -5,11 +5,11 @@ import {useNavigation} from '@react-navigation/native';
 
 import styles from './styles';
 
-function Header({title}) {
+function Header({title, headerStyle}) {
   const navigation = useNavigation();
   const goBack = () => navigation.goBack(null);
   return (
-    <View style={styles.header}>
+    <View style={[styles.header, headerStyle]}>
       <Icon
         name="chevron-back"
         style={styles.iconoBack}

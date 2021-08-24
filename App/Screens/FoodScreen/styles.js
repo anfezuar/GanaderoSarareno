@@ -28,9 +28,7 @@ export default StyleSheet.create({
     marginVertical: 20,
   },
   buttonStyle: {
-    position: 'absolute',
-    bottom: 16,
-    left: 16,
-    right: 16,
+    width: '100%',
+    marginTop: 20,
   },
 });

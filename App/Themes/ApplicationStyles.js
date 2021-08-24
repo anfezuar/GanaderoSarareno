@@ -1,6 +1,7 @@
 const ApplicationStyles = {
   container: {
     flex: 1,
+    color: '#000',
   },
   iconoBack: {
     position: 'absolute',

@@ -22,5 +22,11 @@ export default StyleSheet.create({
   iconStyle: {
     width: 80,
     height: 80,
+    marginBottom: 40,
+  },
+  buttonContainer: {
+    paddingHorizontal: 16,
+    width: '100%',
+    marginBottom: 40,
   },
 });
