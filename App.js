@@ -7,6 +7,7 @@ import Video from './App/Screens/VideoCarga';
 import CalcularCarga from './App/Screens/CalcularCarga';
 import SubMenuScreen from './App/Screens/SubMenuScreen';
 import FoodScreen from './App/Screens/FoodScreen';
+import DensityScreen from './App/Screens/DensityScreen';
 
 const Stack = createStackNavigator();
 
@@ -37,6 +38,11 @@ const App = () => {
         <Stack.Screen
           name="FoodScreen"
           component={FoodScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="DensityScreen"
+          component={DensityScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

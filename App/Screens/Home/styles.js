@@ -1,17 +1,16 @@
-export default {
-  logo: {
-    width: 182,
-    height: 142,
-    alignSelf: 'center',
-    marginBottom: 30,
-    marginTop: 15,
+import {StyleSheet} from 'react-native';
+
+export default StyleSheet.create({
+  container: {
+    flex: 1,
   },
   contenedor: {
-    backgroundColor: 'rgba(255, 255, 255, 0.5)',
-    height: '80%',
+    height: '50%',
     justifyContent: 'center',
+    marginTop: 50,
     marginHorizontal: 30,
     borderRadius: 8,
+    marginBottom: -50,
   },
   buttonHome: {
     height: 50,
@@ -24,10 +23,10 @@ export default {
     marginBottom: 5,
   },
   logosInf: {
-    height: 60,
-    width: 70,
-    position: 'absolute',
-    bottom: 0,
+    height: 50,
+    width: 60,
+    // position: 'absolute',
+    // bottom: 0,
   },
   logoIzq: {
     left: 30,
@@ -37,10 +36,15 @@ export default {
   },
   viewLogos: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     position: 'absolute',
     bottom: '100%',
     left: 0,
     right: 0,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    paddingVertical: 10,
+    borderRadius: 10,
+    marginHorizontal: 15,
   },
   centrado: {
     justifyContent: 'center',
@@ -51,4 +55,16 @@ export default {
     left: 0,
     right: 0,
   },
-};
+  titleSchool: {
+    //left: 100,
+    width: '80%',
+    alignItems: 'center',
+    // backgroundColor: 'rgba(0,0,0,0.5)',
+    // paddingVertical: 10,
+    // borderRadius: 10,
+  },
+  textSchool: {
+    textAlign: 'center',
+    color: '#E4A956',
+  },
+});

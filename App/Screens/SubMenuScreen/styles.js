@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
 
+const ICON_SIZE = 90;
+
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -10,7 +12,7 @@ export default StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    //backgroundColor: 'white',
     borderRadius: 10,
   },
   subMenuButton: {
@@ -20,8 +22,8 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   iconStyle: {
-    width: 80,
-    height: 80,
+    width: ICON_SIZE,
+    height: ICON_SIZE,
     marginBottom: 40,
   },
   buttonContainer: {

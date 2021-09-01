@@ -1,5 +1,5 @@
-export const titleProtein = '% Proteína / etapa';
-export const titleAliment = 'Alimento diario (Kg)';
+export const titleProtein = '% Proteína';
+export const titleAliment = 'Alimento diario';
 export const titleObservations = 'Observaciones';
 export const observations =
   'Este consumo de alimento esta basado en biomasa en un sistema semiintensivo (hasta 5 peces m2).\nLa cantidad de alimento y su consumo  puede variar según la marca de concentrado, temperatura del agua y densidad.';

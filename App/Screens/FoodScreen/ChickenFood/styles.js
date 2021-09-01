@@ -17,4 +17,9 @@ export default StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  resultAliment: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#015B35',
+  },
 });

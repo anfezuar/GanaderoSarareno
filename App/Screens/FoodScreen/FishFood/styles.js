@@ -3,13 +3,13 @@ import {StyleSheet} from 'react-native';
 export default StyleSheet.create({
   resultContainer: {
     paddingTop: 10,
-    justifyContent: 'space-around',
-    flexDirection: 'row',
+    alignItems: 'center',
   },
   titleResult: {
     fontSize: 18,
     fontWeight: 'bold',
     paddingBottom: 5,
+    textAlign: 'center',
   },
   rightContainer: {
     borderLeftWidth: 1,
@@ -26,7 +26,12 @@ export default StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '50%',
+    width: '100%',
     paddingBottom: 10,
+  },
+  resultAliment: {
+    fontSize: 40,
+    fontWeight: 'bold',
+    color: '#015B35',
   },
 });

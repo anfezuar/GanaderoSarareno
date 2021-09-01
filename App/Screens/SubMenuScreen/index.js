@@ -1,10 +1,9 @@
 import React from 'react';
-import {View, TouchableOpacity, Text, Image} from 'react-native';
+import {View, Image} from 'react-native';
 import {useNavigation, useRoute} from '@react-navigation/native';
 import CommonHeader from '../../components/CommonScreen';
 import CustomButton from '../../components/CustomButton';
 
-import ApplicationStyles from '../../Themes/ApplicationStyles';
 import styles from './styles';
 import {getButtons} from './constants';
 

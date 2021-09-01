@@ -7,18 +7,12 @@ const Menu = {
 export const getButtons = (screen, navigation, params) => {
   switch (screen) {
     case Menu.FISH_SCREEN:
-      return {
-        firstButtonTitle: 'Cantidad de alimento',
-        secondButtonTitle: 'Densidad',
-        firstOnPress: () => navigation.navigate('FoodScreen', params),
-        secondOnPress: () => navigation.navigate(''),
-      };
     case Menu.CHICKEN_SCREEN:
       return {
         firstButtonTitle: 'Cantidad de alimento',
         secondButtonTitle: 'Densidad',
         firstOnPress: () => navigation.navigate('FoodScreen', params),
-        secondOnPress: () => navigation.navigate(''),
+        secondOnPress: () => navigation.navigate('DensityScreen', params),
       };
     default:
       return {

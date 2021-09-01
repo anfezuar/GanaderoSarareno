@@ -21,8 +21,10 @@ export default StyleSheet.create({
     elevation: 5,
   },
   textButton: {
-    color: '#fff',
+    fontSize: 16,
+    color: '#ffffff',
     textAlign: 'center',
+    fontWeight: 'bold',
   },
   linearGradient: {
     paddingLeft: 15,

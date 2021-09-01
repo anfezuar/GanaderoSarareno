@@ -1,53 +1,50 @@
 import React from 'react';
-import {View, ImageBackground, Image, FlatList} from 'react-native';
+import {View, ImageBackground, Image, FlatList, Text} from 'react-native';
 
-import vaca from '../../Images/vaca.png';
-import pollo from '../../Images/pollo.png';
-import pescado from '../../Images/pescado.png';
-import ApplicationStyles from '../../Themes/ApplicationStyles';
+import fondo from '../../Images/fondo.png';
+import ganado from '../../Images/ganado.png';
+import pollos from '../../Images/pollos.png';
+import peces from '../../Images/peces.png';
+import logoColegio from '../../Images/escudovilla.png';
 import styles from './styles';
 import ItemList from './components/itemList';
 const {
   centrado,
   contenedor,
-  logo,
   viewLogos,
   viewlogos,
   logosInf,
   logoIzq,
-  logoDer,
   baner,
 } = styles;
 const Home = (props) => {
   const homeData = [
-    {icon: vaca, title: 'Ganado'},
-    {icon: pescado, title: 'Peces'},
-    {icon: pollo, title: 'Pollos'},
+    {icon: ganado, title: 'Ganado'},
+    {icon: peces, title: 'Peces'},
+    {icon: pollos, title: 'Pollos'},
   ];
   const renderItem = ({item}) => <ItemList {...item} />;
   const keyExtractor = (item, index) => index + item.title;
+  const colegio = 'Institución Educativa\nJosé Odel Lizarazo Villamaga';
   return (
     <ImageBackground
-      source={require('../../Images/fondo.jpg')}
-      style={[ApplicationStyles.container, centrado]}>
+      source={fondo}
+      resizeMode="stretch"
+      style={[styles.container, centrado]}>
       <View style={contenedor}>
-        <Image source={require('../../Images/logo.png')} style={logo} />
         <FlatList
           data={homeData}
           renderItem={renderItem}
           keyExtractor={keyExtractor}
+          scrollEnabled={false}
         />
       </View>
       <View style={viewlogos}>
         <View style={viewLogos}>
-          <Image
-            source={require('../../Images/logoagropecuaria.png')}
-            style={[logosInf, logoIzq]}
-          />
-          <Image
-            source={require('../../Images/escudovilla.png')}
-            style={[logosInf, logoDer]}
-          />
+          <Image source={logoColegio} style={[logosInf, logoIzq]} />
+          <View style={styles.titleSchool}>
+            <Text style={styles.textSchool}>{colegio}</Text>
+          </View>
         </View>
         <Image source={require('../../Images/baner.png')} style={baner} />
       </View>

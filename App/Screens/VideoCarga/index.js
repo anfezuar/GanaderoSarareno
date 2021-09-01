@@ -1,17 +1,15 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-import Header from '../../components/Header';
+import CommonScreen from '../../components/CommonScreen';
 
 import styles from './styles';
-import ApplicationStyles from '../../Themes/ApplicationStyles';
 
 import Video from 'react-native-video';
 
 export default function VideoCarga(props) {
   const {backgroundVideo, textoDir, panelTexto} = styles;
   return (
-    <View style={ApplicationStyles.container}>
-      <Header title={'Calcular Carga'} headerStyle={styles.headerStyle} />
+    <CommonScreen title={'Calcular Carga'}>
       <Video
         source={require('../../Images/video.mp4')}
         controls={true}
@@ -21,6 +19,6 @@ export default function VideoCarga(props) {
       <View style={panelTexto}>
         <Text style={textoDir}>Como calcular la carga animal.</Text>
       </View>
-    </View>
+    </CommonScreen>
   );
 }

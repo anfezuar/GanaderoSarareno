@@ -7,10 +7,11 @@ export default {
   },
   textoCarga: {
     fontWeight: 'bold',
-    fontSize: 18,
+    fontSize: 24,
   },
   botones: {
     marginTop: 30,
+    marginBottom: 15,
   },
   content: {
     margin: 16,

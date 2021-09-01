@@ -116,11 +116,11 @@ export default class calcularCarga extends React.PureComponent {
               autoCompleteType="cc-number"
               keyboardType="number-pad"
             />
-            <TouchableOpacity
-              style={[button, styles.botones]}
-              onPress={this.calcularMateriaSeca}>
-              <Text style={textButton}>Calcular Materia Seca</Text>
-            </TouchableOpacity>
+            <CustomButton
+              title={'Calcular Materia Seca'}
+              onPress={this.calcularMateriaSeca}
+              buttonStyle={styles.botones}
+            />
             {materiaCalculada && (
               <View style={container}>
                 <Text style={styles.texto}>La materia seca disponible es:</Text>
@@ -139,12 +139,11 @@ export default class calcularCarga extends React.PureComponent {
                   autoCompleteType="cc-number"
                   keyboardType="number-pad"
                 />
-
-                <TouchableOpacity
-                  style={[button, styles.botones]}
-                  onPress={this.calcularCarga}>
-                  <Text style={textButton}>Calcular Carga Animal</Text>
-                </TouchableOpacity>
+                <CustomButton
+                  title={'Calcular Carga Animal'}
+                  onPress={this.calcularCarga}
+                  buttonStyle={styles.botones}
+                />
               </View>
             )}
             {cargaCalculada && (

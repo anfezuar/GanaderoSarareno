@@ -15,17 +15,13 @@ export default StyleSheet.create({
     marginTop: 0,
     height: 70,
     marginBottom: 20,
-    backgroundColor: 'rgba(255, 255, 255, 0.3)',
-    // borderBottomWidth: 1,
-    // borderBottomColor: '#717171',
-    // backgroundColor: 'white',
   },
   titleStyle: {
     fontWeight: 'bold',
     fontSize: 24,
     textAlign: 'center',
     marginTop: 14,
-    color: 'white',
+    color: '#E4A956',
   },
   titleContainer: {
     alignSelf: 'center',

@@ -14,7 +14,7 @@ function Header({title, headerStyle}) {
         name="chevron-back"
         style={styles.iconoBack}
         onPress={goBack}
-        color="#fff"
+        color="#E4A956"
       />
       <View style={styles.titleContainer}>
         <Text style={styles.titleStyle}>{title}</Text>

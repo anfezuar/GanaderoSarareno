@@ -14,12 +14,11 @@ function FishFood({protein, aliment}) {
     <View>
       <View style={styles.resultContainer}>
         <View style={styles.allTextContainer}>
-          <Text style={styles.titleResult}>{titleProtein}</Text>
-          <Text>{protein}</Text>
-        </View>
-        <View style={[styles.allTextContainer, styles.rightContainer]}>
           <Text style={styles.titleResult}>{titleAliment}</Text>
-          <Text>{aliment}</Text>
+          <Text style={styles.resultAliment}>{`${aliment} Kg`}</Text>
+        </View>
+        <View style={[styles.allTextContainer]}>
+          <Text style={styles.titleResult}>{`${titleProtein} ${protein}`}</Text>
         </View>
       </View>
       <View>

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, Image, TouchableWithoutFeedback, Keyboard} from 'react-native';
+import {View, TouchableWithoutFeedback, Keyboard} from 'react-native';
 import {useRoute} from '@react-navigation/native';
 import CommonScreen from '../../components/CommonScreen';
 import CustomTextInput from '../../components/CustomTextInput';
@@ -32,30 +32,31 @@ function FoodScreen() {
       setChickenAliment(totalAliment);
     }
   };
-  const handleTapOut = () => Keyboard.dismiss;
+  const handleTapOut = () => Keyboard.dismiss();
   return (
     <TouchableWithoutFeedback onPress={handleTapOut} style={styles.container}>
       <CommonScreen title={title}>
         <View style={styles.content}>
-          <Image
-            source={route.params.icon}
-            resizeMode={'contain'}
-            style={styles.iconStyle}
-          />
           <View style={styles.formStyle}>
-            <CustomTextInput
-              label={'Peso Promedio'}
-              value={weight}
-              onChangeText={setWeight}
-            />
             <CustomTextInput
               label={
                 title === 'Peces'
-                  ? 'Cantidad de animales a sembrar'
+                  ? 'Cantidad de peces a alimentar'
                   : 'Cantidad de pollos'
               }
               value={animals}
               onChangeText={setAnimals}
+              keyboardType={'number-pad'}
+            />
+            <CustomTextInput
+              label={
+                title === 'Peces'
+                  ? 'Peso promedio de los peces (gramos)'
+                  : 'Peso promedio de las aves (gramos)'
+              }
+              value={weight}
+              onChangeText={setWeight}
+              keyboardType={'number-pad'}
             />
             {hasResult &&
               (title === 'Peces' ? (
