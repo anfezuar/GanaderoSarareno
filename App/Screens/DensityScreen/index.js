@@ -33,10 +33,12 @@ function DensityScreen() {
     });
     setArea(totalArea);
   };
-  const titleArea = 'Área';
   return (
     <CustomScreen title={title}>
       <View style={styles.content}>
+        <Text style={styles.titleScreen}>
+          {title === 'Peces' ? 'Peces a sembrar' : 'Aves a alojar'}
+        </Text>
         <View style={styles.formStyle}>
           <CustomTextInput
             label={'Largo'}
@@ -50,13 +52,11 @@ function DensityScreen() {
             onChangeText={setWidth}
             keyboardType={'number-pad'}
           />
-          <Text style={styles.titleResult}>{titleArea}</Text>
-          <Text style={styles.textResult}>{`${area} mt2`}</Text>
           {hasResult &&
             (title === 'Peces' ? (
-              <FishDensity fish={fish} />
+              <FishDensity fish={fish} area={area} />
             ) : (
-              <ChickenDensity chickens={chickens} />
+              <ChickenDensity chickens={chickens} area={area} />
             ))}
         </View>
         <View style={styles.buttonStyle}>

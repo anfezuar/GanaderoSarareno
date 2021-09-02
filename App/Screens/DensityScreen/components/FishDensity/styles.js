@@ -27,4 +27,20 @@ export default StyleSheet.create({
   cellStyle: {
     ...COMMON_STYLE,
   },
+  titleResult: {
+    paddingTop: 10,
+    fontSize: 18,
+    fontWeight: 'bold',
+    paddingBottom: 5,
+    textAlign: 'center',
+  },
+  textResult: {
+    fontSize: 40,
+    textAlign: 'center',
+    color: '#015B35',
+    paddingBottom: 10,
+  },
+  textExponente: {
+    fontSize: 20,
+  },
 });

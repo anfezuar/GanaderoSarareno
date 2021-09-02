@@ -2,7 +2,7 @@ export const titleProtein = '% Proteína';
 export const titleAliment = 'Alimento diario';
 export const titleObservations = 'Observaciones';
 export const observations =
-  'Este consumo de alimento esta basado en biomasa en un sistema semiintensivo (hasta 5 peces m2).\nLa cantidad de alimento y su consumo  puede variar según la marca de concentrado, temperatura del agua y densidad.';
+  '\u2022 Este consumo de alimento esta basado en biomasa en un sistema semiintensivo (hasta 5 peces m2).\n\u2022 La cantidad de alimento y su consumo puede variar según la marca de concentrado, temperatura del agua y densidad.';
 
 export const getProtein = (weight) => {
   if (weight > 180) {

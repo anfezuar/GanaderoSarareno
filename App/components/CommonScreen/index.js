@@ -1,17 +1,19 @@
 import React from 'react';
-import LinearGradient from 'react-native-linear-gradient';
+import {ImageBackground} from 'react-native';
 import Header from '../../components/Header';
+import imageBg from '../../Images/bg.png';
 
 import styles from './styles';
 
 function CommonScreen({children, title}) {
   return (
-    <LinearGradient
-      colors={['#000000', '#343434', '#ffffff']}
-      style={styles.container}>
+    <ImageBackground
+      style={styles.container}
+      source={imageBg}
+      resizeMethod={'auto'}>
       <Header title={title} />
       {children}
-    </LinearGradient>
+    </ImageBackground>
   );
 }
 

@@ -35,4 +35,8 @@ export default StyleSheet.create({
     color: '#015B35',
     paddingBottom: 10,
   },
+  titleScreen: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
 });

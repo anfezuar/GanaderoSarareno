@@ -1,7 +1,7 @@
 export const titleAliment = 'Alimento diario';
 export const titleObservations = 'Observaciones';
 export const observations =
-  'Se debe brindar un fuente de calor los primeros 12 dias de vida del pollito y agua con vitaminas los primeros 5 dias.\nLa cantidad de comederos, bebederos y la altura de los mismos es indispensable en un adecuado pograma de alimentación de pollos.\nLa cantidad de alimento y su consumo puede variar según el sexo del ave (hembra o macho) la marca de concentrado, temperatura ambiental y densidad.';
+  '\u2022 Se debe brindar un fuente de calor los primeros 12 dias de vida del pollito y agua con vitaminas los primeros 5 dias.\n\u2022 La cantidad de comederos, bebederos y la altura de los mismos es indispensable en un adecuado pograma de alimentación de pollos.\n\u2022 La cantidad de alimento y su consumo puede variar según el sexo del ave (hembra o macho) la marca de concentrado, temperatura ambiental y densidad.';
 
 export const getConsumption = (weight) => {
   if (weight > 3264) {
