@@ -43,4 +43,10 @@ export default StyleSheet.create({
   textExponente: {
     fontSize: 20,
   },
+  resultContainer: {
+    paddingBottom: 10,
+  },
+  textLast: {
+    fontSize: 16,
+  },
 });
