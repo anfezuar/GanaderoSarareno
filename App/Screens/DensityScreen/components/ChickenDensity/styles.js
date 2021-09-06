@@ -44,8 +44,13 @@ export default StyleSheet.create({
     color: '#015B35',
     paddingBottom: 10,
   },
+  styleSegment: {
+    height: 60,
+  },
   textExponente: {
     fontSize: 20,
+    paddingBottom: 18,
+    color: '#015B35',
   },
   resultContainer: {
     paddingBottom: 10,
@@ -53,7 +58,8 @@ export default StyleSheet.create({
   textLast: {
     fontSize: 16,
   },
-  styleSegment: {
-    height: 40,
+  areaContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });

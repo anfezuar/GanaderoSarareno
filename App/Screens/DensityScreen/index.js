@@ -33,32 +33,39 @@ function DensityScreen() {
     });
     setArea(totalArea);
   };
+  const getTitleFields = () =>
+    title === 'Peces'
+      ? 'Largo y ancho del estanque (metros)'
+      : 'Largo y ancho del galpón (metros)';
   return (
     <CustomScreen title={title}>
       <View style={styles.content}>
         <Text style={styles.titleScreen}>
           {title === 'Peces' ? 'Peces a sembrar' : 'Aves a alojar'}
         </Text>
+        <Text style={styles.titleFields}>{getTitleFields()}</Text>
         <View style={styles.formStyle}>
           <CustomTextInput
-            label={'Largo'}
             value={long}
             onChangeText={setLong}
             keyboardType={'number-pad'}
+            placeholder="Largo"
+            styleContainer={styles.inputStyle}
           />
           <CustomTextInput
-            label={'Ancho'}
             value={width}
             onChangeText={setWidth}
             keyboardType={'number-pad'}
+            placeholder="Ancho"
+            styleContainer={styles.inputStyle}
           />
-          {hasResult &&
-            (title === 'Peces' ? (
-              <FishDensity fish={fish} area={area} />
-            ) : (
-              <ChickenDensity chickens={chickens} area={area} />
-            ))}
         </View>
+        {hasResult &&
+          (title === 'Peces' ? (
+            <FishDensity fish={fish} area={area} />
+          ) : (
+            <ChickenDensity chickens={chickens} area={area} />
+          ))}
         <View style={styles.buttonStyle}>
           <CustomButton title={'Calcular'} onPress={handleCalculate} />
         </View>

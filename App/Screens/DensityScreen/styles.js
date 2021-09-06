@@ -12,6 +12,9 @@ export default StyleSheet.create({
   },
   formStyle: {
     width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: -15,
   },
   iconStyle: {
     width: 60,
@@ -38,5 +41,12 @@ export default StyleSheet.create({
   titleScreen: {
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  titleFields: {
+    fontSize: 18,
+    paddingTop: 15,
+  },
+  inputStyle: {
+    width: '49%',
   },
 });

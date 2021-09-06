@@ -42,11 +42,17 @@ export default StyleSheet.create({
   },
   textExponente: {
     fontSize: 20,
+    paddingBottom: 18,
+    color: '#015B35',
   },
   resultContainer: {
     paddingBottom: 10,
   },
   textLast: {
     fontSize: 16,
+  },
+  areaContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
 });

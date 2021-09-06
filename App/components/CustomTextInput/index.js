@@ -7,10 +7,11 @@ function CustomTextInput({
   label,
   labelStyle = {},
   textInputStyle = {},
+  styleContainer = {},
   ...props
 }) {
   return (
-    <View>
+    <View style={styleContainer}>
       <Text style={[styles.labelStyle, labelStyle]}>{label}</Text>
       <TextInput style={[styles.textInputStyle, textInputStyle]} {...props} />
     </View>
