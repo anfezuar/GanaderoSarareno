@@ -6,6 +6,7 @@ import ganado from '../../Images/ganado.png';
 import pollos from '../../Images/pollos.png';
 import peces from '../../Images/peces.png';
 import logoColegio from '../../Images/escudovilla.png';
+import ondas from '../../Images/ondas.png';
 import styles from './styles';
 import ItemList from './components/itemList';
 const {
@@ -45,6 +46,11 @@ const Home = (props) => {
           <View style={styles.titleSchool}>
             <Text style={styles.textSchool}>{colegio}</Text>
           </View>
+          <Image
+            source={ondas}
+            resizeMode={'contain'}
+            style={[styles.logosInf, styles.logoDer]}
+          />
         </View>
         <Image source={require('../../Images/baner.png')} style={baner} />
       </View>

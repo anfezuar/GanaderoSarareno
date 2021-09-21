@@ -11,7 +11,7 @@ function ChickenDensity({chickens, area}) {
     'Templado\nEntre 17 y 24 °C',
     'Cálido\nMas de 24 °C',
   ];
-  const titleArea = 'Área del estanque';
+  const titleArea = 'Área del galpón';
   const titleChickenType = 'Escoja el clima de la zona';
   const [selectedIndex, setSelectedIndex] = useState(0);
   const chickenSelected = () => {
@@ -39,7 +39,7 @@ function ChickenDensity({chickens, area}) {
       />
       <Text style={styles.titleResult}>{titleArea}</Text>
       <View style={styles.areaContainer}>
-        <Text style={styles.textResult}>{`${area} m`}</Text>
+        <Text style={styles.textResult}>{`${area.toFixed(2)} m`}</Text>
         <Text style={styles.textExponente}>{2}</Text>
       </View>
       <Text style={styles.titleResult}>{title}</Text>

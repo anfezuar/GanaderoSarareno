@@ -18,25 +18,24 @@ export default StyleSheet.create({
     marginTop: 10,
   },
   baner: {
-    height: 60,
+    height: 40,
     width: null,
     marginBottom: 5,
+    marginHorizontal: 5,
   },
   logosInf: {
     height: 50,
     width: 60,
-    // position: 'absolute',
-    // bottom: 0,
   },
   logoIzq: {
-    left: 30,
+    left: 20,
   },
   logoDer: {
     right: 30,
   },
   viewLogos: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     position: 'absolute',
     bottom: '100%',
     left: 0,
@@ -45,6 +44,7 @@ export default StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 10,
     marginHorizontal: 15,
+    marginBottom: 5,
   },
   centrado: {
     justifyContent: 'center',
@@ -65,6 +65,7 @@ export default StyleSheet.create({
   },
   textSchool: {
     textAlign: 'center',
-    color: '#E4A956',
+    color: '#FFFFFF',
+    fontWeight: 'bold',
   },
 });

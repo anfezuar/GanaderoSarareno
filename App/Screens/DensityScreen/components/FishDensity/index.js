@@ -35,7 +35,7 @@ function FishDensity({fish, area}) {
       />
       <Text style={styles.titleResult}>{titleArea}</Text>
       <View style={styles.areaContainer}>
-        <Text style={styles.textResult}>{`${area} m`}</Text>
+        <Text style={styles.textResult}>{`${area.toFixed(2)} m`}</Text>
         <Text style={styles.textExponente}>{2}</Text>
       </View>
       <Text style={styles.titleResult}>{title}</Text>
