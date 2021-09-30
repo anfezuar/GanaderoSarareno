@@ -27,6 +27,13 @@ export default StyleSheet.create({
     height: 50,
     width: 60,
   },
+  logoOndas: {
+    height: 70,
+    width: 90,
+    marginTop: 35,
+    marginBottom: -50,
+    alignSelf: 'center',
+  },
   logoIzq: {
     left: 20,
   },

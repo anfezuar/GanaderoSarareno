@@ -32,6 +32,11 @@ const Home = (props) => {
       source={fondo}
       resizeMode="stretch"
       style={[styles.container, centrado]}>
+      <Image
+        source={ondas}
+        resizeMode={'contain'}
+        style={[styles.logosInf, styles.logoOndas]}
+      />
       <View style={contenedor}>
         <FlatList
           data={homeData}
@@ -42,15 +47,10 @@ const Home = (props) => {
       </View>
       <View style={viewlogos}>
         <View style={viewLogos}>
-          <Image source={logoColegio} style={[logosInf, logoIzq]} />
+          <Image source={logoColegio} style={[logosInf, styles.logoIzq]} />
           <View style={styles.titleSchool}>
             <Text style={styles.textSchool}>{colegio}</Text>
           </View>
-          <Image
-            source={ondas}
-            resizeMode={'contain'}
-            style={[styles.logosInf, styles.logoDer]}
-          />
         </View>
         <Image source={require('../../Images/baner.png')} style={baner} />
       </View>
