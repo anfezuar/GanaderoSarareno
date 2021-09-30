@@ -9,15 +9,7 @@ import logoColegio from '../../Images/escudovilla.png';
 import ondas from '../../Images/ondas.png';
 import styles from './styles';
 import ItemList from './components/itemList';
-const {
-  centrado,
-  contenedor,
-  viewLogos,
-  viewlogos,
-  logosInf,
-  logoIzq,
-  baner,
-} = styles;
+const {centrado, contenedor, viewLogos, viewlogos, logosInf, baner} = styles;
 const Home = (props) => {
   const homeData = [
     {icon: ganado, title: 'Ganado'},
