@@ -15,7 +15,7 @@ function FishFood({protein, aliment}) {
       <View style={styles.resultContainer}>
         <View style={styles.allTextContainer}>
           <Text style={styles.titleResult}>{titleAliment}</Text>
-          <Text style={styles.resultAliment}>{`${aliment} Kg`}</Text>
+          <Text style={styles.resultAliment}>{`${aliment.toFixed(2)} Kg`}</Text>
         </View>
         <View style={[styles.allTextContainer]}>
           <Text style={styles.titleResult}>{`${titleProtein} ${protein}`}</Text>

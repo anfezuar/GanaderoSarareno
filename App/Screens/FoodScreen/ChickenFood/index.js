@@ -8,7 +8,7 @@ function ChickenFood({aliment}) {
     <View>
       <View style={styles.resultContainer}>
         <Text style={styles.titleResult}>{titleAliment}</Text>
-        <Text style={styles.resultAliment}>{`${aliment} Kg`}</Text>
+        <Text style={styles.resultAliment}>{`${aliment.toFixed(2)} Kg`}</Text>
       </View>
       <View>
         <Text style={styles.titleObservationsStyle}>{titleObservations}</Text>

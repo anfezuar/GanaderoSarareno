@@ -44,7 +44,7 @@ const Home = (props) => {
             <Text style={styles.textSchool}>{colegio}</Text>
           </View>
         </View>
-        <Image source={require('../../Images/baner.png')} style={baner} />
+        <Image source={require('../../Images/baner.jpg')} style={baner} />
       </View>
     </ImageBackground>
   );
