@@ -8,7 +8,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "android:build": "cd android && ./gradlew clean && ./gradlew assembleRelease"
+    "android:build": "cd android && ./gradlew clean && ./gradlew assembleRelease",
+    "android:build:prod": "cd android && ./gradlew clean && ./gradlew bundleRelease"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
