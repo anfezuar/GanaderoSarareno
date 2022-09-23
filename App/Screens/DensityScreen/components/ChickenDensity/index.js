@@ -32,7 +32,7 @@ function ChickenDensity({chickens, area}) {
       <SegmentedControl
         values={nameClimate}
         selectedIndex={selectedIndex}
-        onChange={(event) =>
+        onChange={event =>
           setSelectedIndex(event.nativeEvent.selectedSegmentIndex)
         }
         style={styles.styleSegment}
