@@ -10,7 +10,7 @@ import ondas from '../../Images/ondas.png';
 import styles from './styles';
 import ItemList from './components/itemList';
 const {centrado, contenedor, viewLogos, viewlogos, logosInf, baner} = styles;
-const Home = (props) => {
+const Home = () => {
   const homeData = [
     {icon: ganado, title: 'Ganado'},
     {icon: peces, title: 'Peces'},
@@ -34,7 +34,6 @@ const Home = (props) => {
           data={homeData}
           renderItem={renderItem}
           keyExtractor={keyExtractor}
-          scrollEnabled={false}
         />
       </View>
       <View style={viewlogos}>
