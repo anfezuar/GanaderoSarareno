@@ -19,7 +19,7 @@ export const getButtons = (screen, navigation, params) => {
       return {
         firstButtonTitle: 'Porcentaje de postura',
         secondButtonTitle: 'Densidad',
-        firstOnPress: () => navigation.navigate('FoodScreen', params),
+        firstOnPress: () => navigation.navigate('EggsScreen', params),
         secondOnPress: () => navigation.navigate('DensityScreen', params),
       };
     default:

@@ -29,7 +29,7 @@ function FishDensity({fish, area}) {
       <SegmentedControl
         values={nameFish}
         selectedIndex={selectedIndex}
-        onChange={(event) =>
+        onChange={event =>
           setSelectedIndex(event.nativeEvent.selectedSegmentIndex)
         }
       />

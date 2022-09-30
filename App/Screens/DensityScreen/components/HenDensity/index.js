@@ -9,7 +9,7 @@ function HenDensity({hens, area}) {
     'Cantidad aproximada de gallinas ponedoras que se pueden tener en esta área';
   const titleArea = 'Área del galpón';
   const titleHenType = 'Escoja el clima de la zona';
-  const titleNido = 'Cantidad de nidos en el galpon';
+  const titleNido = 'Cantidad de nidos en el galpón';
   const [selected, setSelected] = useState('');
   const henSelected = item => setSelected(hens[`${item}`]);
   const [open, setOpen] = useState(false);

@@ -8,42 +8,41 @@ import CalcularCarga from './App/Screens/CalcularCarga';
 import SubMenuScreen from './App/Screens/SubMenuScreen';
 import FoodScreen from './App/Screens/FoodScreen';
 import DensityScreen from './App/Screens/DensityScreen';
+import EggsScreen from './App/Screens/EggsScreen';
 
 const Stack = createStackNavigator();
 
 const App = () => {
+  const withoutHeader = {headerShown: false};
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={Home}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Video"
-          component={Video}
-          options={{headerShown: false}}
-        />
+        <Stack.Screen name="Home" component={Home} options={withoutHeader} />
+        <Stack.Screen name="Video" component={Video} options={withoutHeader} />
         <Stack.Screen
           name="CalcularCarga"
           component={CalcularCarga}
-          options={{headerShown: false}}
+          options={withoutHeader}
         />
         <Stack.Screen
           name="SubMenuScreen"
           component={SubMenuScreen}
-          options={{headerShown: false}}
+          options={withoutHeader}
         />
         <Stack.Screen
           name="FoodScreen"
           component={FoodScreen}
-          options={{headerShown: false}}
+          options={withoutHeader}
         />
         <Stack.Screen
           name="DensityScreen"
           component={DensityScreen}
-          options={{headerShown: false}}
+          options={withoutHeader}
+        />
+        <Stack.Screen
+          name="EggsScreen"
+          component={EggsScreen}
+          options={withoutHeader}
         />
       </Stack.Navigator>
     </NavigationContainer>
