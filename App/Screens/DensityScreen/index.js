@@ -7,6 +7,7 @@ import CustomButton from '../../components/CustomButton';
 
 import FishDensity from './components/FishDensity';
 import ChickenDensity from './components/ChickenDensity';
+import HenDensity from './components/HenDensity';
 import styles from './styles';
 
 function DensityScreen() {
@@ -18,6 +19,7 @@ function DensityScreen() {
   const [area, setArea] = useState('0');
   const [fish, setFish] = useState(null);
   const [chickens, setChickens] = useState(null);
+  const [hens, setHens] = useState(null);
   const handleCalculate = () => {
     setHasResult(true);
     const totalArea = long * width;
@@ -31,12 +33,30 @@ function DensityScreen() {
       tempered: totalArea * 8,
       warm: totalArea * 6,
     });
+    setHens({
+      cold: totalArea * 10,
+      tempered: totalArea * 8,
+      warm: totalArea * 6,
+    });
     setArea(totalArea);
   };
   const getTitleFields = () =>
     title === 'Peces'
       ? 'Largo y ancho del estanque (metros)'
       : 'Largo y ancho del galpón (metros)';
+
+  const getDensityScreen = () => {
+    switch (title) {
+      case 'Peces':
+        return <FishDensity fish={fish} area={area} />;
+      case 'Pollos':
+        return <ChickenDensity chickens={chickens} area={area} />;
+      case 'Gallinas':
+        return <HenDensity hens={hens} area={area} />;
+      default:
+        break;
+    }
+  };
   return (
     <CustomScreen title={title}>
       <View style={styles.content}>
@@ -60,12 +80,7 @@ function DensityScreen() {
             styleContainer={styles.inputStyle}
           />
         </View>
-        {hasResult &&
-          (title === 'Peces' ? (
-            <FishDensity fish={fish} area={area} />
-          ) : (
-            <ChickenDensity chickens={chickens} area={area} />
-          ))}
+        {hasResult && getDensityScreen()}
         <View style={styles.buttonStyle}>
           <CustomButton title={'Calcular'} onPress={handleCalculate} />
         </View>

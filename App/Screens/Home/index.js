@@ -15,6 +15,7 @@ const Home = () => {
     {icon: ganado, title: 'Ganado'},
     {icon: peces, title: 'Peces'},
     {icon: pollos, title: 'Pollos'},
+    {icon: pollos, title: 'Gallinas'},
   ];
   const renderItem = ({item}) => <ItemList {...item} />;
   const keyExtractor = (item, index) => index + item.title;
