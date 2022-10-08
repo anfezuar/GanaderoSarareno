@@ -39,7 +39,10 @@ const Home = () => {
       </View>
       <View style={viewlogos}>
         <View style={viewLogos}>
-          <Image source={logoColegio} style={[logosInf, styles.logoIzq]} />
+          <Image
+            source={logoColegio}
+            style={[styles.logosInf, styles.logoIzq]}
+          />
           <View style={styles.titleSchool}>
             <Text style={styles.textSchool}>{colegio}</Text>
           </View>
