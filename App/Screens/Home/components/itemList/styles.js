@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
 
+import {scale} from '../../../../utils/scalingUtils';
+
 const ICON_SIZE = 90;
 
 export default StyleSheet.create({
@@ -11,14 +13,12 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   iconStyle: {
-    width: ICON_SIZE,
-    height: ICON_SIZE,
-    marginHorizontal: 20,
-    marginVertical: 20,
-    marginRight: 30,
+    width: scale(ICON_SIZE),
+    height: scale(ICON_SIZE),
+    margin: 20,
   },
   textStyle: {
-    fontSize: 35,
+    fontSize: scale(35),
     fontWeight: 'bold',
     color: '#fcac5c',
   },

@@ -1,5 +1,7 @@
 import {StyleSheet} from 'react-native';
 
+import {scale} from '../../utils/scalingUtils';
+
 export default StyleSheet.create({
   container: {
     flex: 1,
@@ -24,8 +26,8 @@ export default StyleSheet.create({
     marginHorizontal: 5,
   },
   logosInf: {
-    height: 50,
-    width: 60,
+    height: scale(50),
+    width: scale(60),
   },
   logoOndas: {
     height: 70,
@@ -63,14 +65,11 @@ export default StyleSheet.create({
     right: 0,
   },
   titleSchool: {
-    //left: 100,
     width: '80%',
     alignItems: 'center',
-    // backgroundColor: 'rgba(0,0,0,0.5)',
-    // paddingVertical: 10,
-    // borderRadius: 10,
   },
   textSchool: {
+    fontSize: scale(12),
     textAlign: 'center',
     color: '#FFFFFF',
     fontWeight: 'bold',
