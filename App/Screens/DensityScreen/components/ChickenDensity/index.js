@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text} from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import {ScrollView} from 'react-native-gesture-handler';
 
 import styles from './styles';
 
@@ -31,13 +32,10 @@ function ChickenDensity({chickens, area}) {
         setOpen={setOpen}
         setValue={setValue}
         setItems={setItems}
-        onChangeValue={item => {
-          console.log('item', item);
-          chickenSelected(item);
-        }}
+        onChangeValue={item => chickenSelected(item)}
       />
       {value !== '' && (
-        <>
+        <ScrollView>
           <Text style={styles.titleResult}>{titleArea}</Text>
           <View style={styles.areaContainer}>
             <Text style={styles.textResult}>{`${area.toFixed(2)} m`}</Text>
@@ -45,7 +43,7 @@ function ChickenDensity({chickens, area}) {
           </View>
           <Text style={styles.titleResult}>{title}</Text>
           <Text style={[styles.textResult]}>{`${selected} Aves`}</Text>
-        </>
+        </ScrollView>
       )}
     </View>
   );
