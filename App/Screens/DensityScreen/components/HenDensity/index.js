@@ -21,7 +21,7 @@ function HenDensity({hens, area}) {
     {label: 'Cálido mas de 24 °C', value: 'warm'},
   ]);
   return (
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
       <Text style={[styles.titleResult, styles.resultContainer]}>
         {titleHenType}
       </Text>
@@ -32,13 +32,10 @@ function HenDensity({hens, area}) {
         setOpen={setOpen}
         setValue={setValue}
         setItems={setItems}
-        onChangeValue={item => {
-          console.log('item', item);
-          henSelected(item);
-        }}
+        onChangeValue={item => henSelected(item)}
       />
       {value !== '' && (
-        <>
+        <ScrollView>
           <Text style={styles.titleResult}>{titleArea}</Text>
           <View style={styles.areaContainer}>
             <Text style={styles.textResult}>{`${area.toFixed(2)} m`}</Text>
@@ -48,9 +45,9 @@ function HenDensity({hens, area}) {
           <Text style={[styles.textResult]}>{`${selected} Aves`}</Text>
           <Text style={styles.titleResult}>{titleNido}</Text>
           <Text style={[styles.textResult]}>{`${selected / 5} Aves`}</Text>
-        </>
+        </ScrollView>
       )}
-    </ScrollView>
+    </View>
   );
 }
 

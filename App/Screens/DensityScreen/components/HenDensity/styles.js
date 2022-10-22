@@ -62,5 +62,7 @@ export default StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  container: {width: '100%'},
+  container: {
+    flex: 1,
+  },
 });
