@@ -10,15 +10,15 @@ import {getButtons} from './constants';
 function SubMenuScreen() {
   const navigation = useNavigation();
   const route = useRoute();
-  const title = route.params.title;
+  const {title, icon} = route.params;
   const elementsToButton = getButtons(title, navigation, route.params);
   return (
     <CommonHeader title={title}>
       <View style={styles.content}>
         <Image
-          source={route.params.icon}
+          source={icon}
           resizeMode={'contain'}
-          style={styles.iconStyle}
+          style={[styles.iconStyle, title === 'Gallinas' && styles.iconHen]}
         />
         <View style={styles.buttonContainer}>
           <CustomButton
