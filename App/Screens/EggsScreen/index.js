@@ -26,7 +26,7 @@ function EggsScreen() {
   const [hasResult, setHasResult] = useState(false);
   const handleCalculate = () => {
     setHasResult(true);
-    setResult((animals * eggs) / 100);
+    setResult((eggs * 100) / animals);
   };
   const handleTapOut = () => Keyboard.dismiss();
   return (
@@ -49,7 +49,9 @@ function EggsScreen() {
             {hasResult && (
               <View>
                 <Text style={styles.titleScreen}>{titleResult}</Text>
-                <Text style={styles.textResult}>{result + ' %'}</Text>
+                <Text style={styles.textResult}>
+                  {Number(result).toFixed(2) + ' %'}
+                </Text>
                 <Text
                   style={[
                     styles.textResult,
