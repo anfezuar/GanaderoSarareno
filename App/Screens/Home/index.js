@@ -32,9 +32,11 @@ const Home = () => {
       />
       <View style={contenedor}>
         <FlatList
+          key={'_'}
           data={homeData}
           renderItem={renderItem}
           keyExtractor={keyExtractor}
+          numColumns={2}
         />
       </View>
       <View style={viewlogos}>
