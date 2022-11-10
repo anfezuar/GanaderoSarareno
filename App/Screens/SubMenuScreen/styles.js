@@ -26,6 +26,13 @@ export default StyleSheet.create({
     height: ICON_SIZE,
     marginBottom: 40,
   },
+  iconHen: {
+    width: 40,
+    height: 40,
+    marginHorizontal: 50,
+    marginVertical: 30,
+    tintColor: '#fcac5c',
+  },
   buttonContainer: {
     paddingHorizontal: 16,
     width: '100%',
