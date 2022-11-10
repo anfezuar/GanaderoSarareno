@@ -29,6 +29,10 @@ export default StyleSheet.create({
     height: scale(50),
     width: scale(60),
   },
+  logoCol: {
+    height: scale(40),
+    width: scale(40),
+  },
   logoOndas: {
     height: 70,
     width: 90,

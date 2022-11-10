@@ -17,8 +17,15 @@ export default StyleSheet.create({
     height: scale(ICON_SIZE),
     marginHorizontal: 20,
   },
+  iconHen: {
+    width: scale(40),
+    height: scale(40),
+    marginHorizontal: 50,
+    marginVertical: 30,
+    tintColor: '#fcac5c',
+  },
   textStyle: {
-    fontSize: scale(30),
+    fontSize: scale(28),
     fontWeight: 'bold',
     color: '#fcac5c',
   },

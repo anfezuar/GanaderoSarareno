@@ -5,17 +5,19 @@ import fondo from '../../Images/fondo.png';
 import ganado from '../../Images/ganado.png';
 import pollos from '../../Images/pollos.png';
 import peces from '../../Images/peces.png';
+import gallinas from '../../Images/gallinas.png';
 import logoColegio from '../../Images/escudovilla.png';
 import ondas from '../../Images/ondas.png';
 import styles from './styles';
 import ItemList from './components/itemList';
+
 const {centrado, contenedor, viewLogos, viewlogos, logosInf, baner} = styles;
 const Home = () => {
   const homeData = [
     {icon: ganado, title: 'Ganado'},
     {icon: peces, title: 'Peces'},
     {icon: pollos, title: 'Pollos'},
-    {icon: pollos, title: 'Gallinas'},
+    {icon: gallinas, title: 'Gallinas'},
   ];
   const renderItem = ({item}) => <ItemList {...item} />;
   const keyExtractor = (item, index) => index + item.title;
@@ -28,7 +30,7 @@ const Home = () => {
       <Image
         source={ondas}
         resizeMode={'contain'}
-        style={[styles.logosInf, styles.logoOndas]}
+        style={[logosInf, styles.logoOndas]}
       />
       <View style={contenedor}>
         <FlatList
@@ -43,7 +45,7 @@ const Home = () => {
         <View style={viewLogos}>
           <Image
             source={logoColegio}
-            style={[styles.logosInf, styles.logoIzq]}
+            style={[styles.logoCol, styles.logoIzq]}
           />
           <View style={styles.titleSchool}>
             <Text style={styles.textSchool}>{colegio}</Text>

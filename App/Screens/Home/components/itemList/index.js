@@ -8,7 +8,11 @@ function ItemList({icon, title}) {
   const handlePress = () => navigation.navigate('SubMenuScreen', {icon, title});
   return (
     <TouchableOpacity style={styles.container} onPress={handlePress}>
-      <Image source={icon} resizeMode={'contain'} style={styles.iconStyle} />
+      <Image
+        source={icon}
+        resizeMode={'contain'}
+        style={[title === 'Gallinas' ? styles.iconHen : styles.iconStyle]}
+      />
       <Text style={styles.textStyle}>{title}</Text>
     </TouchableOpacity>
   );
